@@ -22,30 +22,33 @@ By implementing an ETL (Extract, Transform, Load) pipeline in Python, I ensured 
 Tasks Performed
 1. Data Loading and Cleaning
 The dataset was first loaded into a Pandas DataFrame, followed by initial cleaning steps:
-1)Dropped unnecessary columns like User_ID, Cust_name, and unnamed1, which were not useful for analysis.
-2)Checked for missing values and filled missing amounts using Mean Imputation to maintain consistency.
+
+*Dropped unnecessary columns like User_ID, Cust_name, and unnamed1, which were not useful for analysis.
+*Checked for missing values and filled missing amounts using Mean Imputation to maintain consistency.
 
 2. Handling Data Inconsistencies
 The dataset had negative values in the Age and Orders columns, leading to misleading results. To fix this:
-1)Removed rows where Age was ≤ 0 or > 100, ensuring only realistic values.
-2)Ensured Orders had only positive values to maintain logical correctness.
+
+*Removed rows where Age was ≤ 0 or > 100, ensuring only realistic values.
+*Ensured Orders had only positive values to maintain logical correctness.
 
 3. Encoding Categorical Data
 Categorical variables were converted into numerical format to facilitate analysis:
-1)Gender Encoding: Converted "Male" and "Female" into binary values (0 for Female, 1 for Male) using LabelEncoder().
+
+*Gender Encoding: Converted "Male" and "Female" into binary values (0 for Female, 1 for Male) using LabelEncoder().
 
 4. Feature Engineering
 To derive better insights from the dataset, several new features were created:
-1)Total_Spend: Orders × Amount – Represents the total expenditure of each customer.
-2)Avg_Spend_per_Order: Total_Spend / Orders – Measures how much a customer spends per order.
-3)Total Sales per Product Category: Grouped data by Product_Category and calculated the total revenue for each category.
-4)High Spender Flag: Identified Top 25% customers based on total spending using quantile-based segmentation.
+*Total_Spend: Orders × Amount – Represents the total expenditure of each customer.
+*Avg_Spend_per_Order: Total_Spend / Orders – Measures how much a customer spends per order.
+*Total Sales per Product Category: Grouped data by Product_Category and calculated the total revenue for each category.
+*High Spender Flag: Identified Top 25% customers based on total spending using quantile-based segmentation.
 
 These features help in understanding customer purchase behavior and product performance.
 
 5. Data Aggregation & Export
-1)Merged category-wise total sales into the dataset, providing an overview of how each product category contributes to overall revenue.
-2)Saved the final cleaned and transformed dataset as final_diwali_sales_data.csv for further business insights and analysis.
+*Merged category-wise total sales into the dataset, providing an overview of how each product category contributes to overall revenue.
+*Saved the final cleaned and transformed dataset as final_diwali_sales_data.csv for further business insights and analysis.
 
 Tools & Technologies Used
 1)Python – For data processing and automation
