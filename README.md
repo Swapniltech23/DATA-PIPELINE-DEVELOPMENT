@@ -65,3 +65,6 @@ This project successfully transformed a raw, unstructured dataset into a clean, 
 
 The ETL pipeline ensures that the data is reliable and reusable, making it highly valuable for business analytics, decision-making, and e-commerce strategy planning. 
 
+#OUTPUT
+![Image](https://github.com/user-attachments/assets/b327c337-7bf2-429d-84d3-c045e1a8134e)
+
